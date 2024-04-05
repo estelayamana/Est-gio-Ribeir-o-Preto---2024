@@ -1,0 +1,87 @@
+1) Observe o trecho de código abaixo:
+
+int INDICE = 13, SOMA = 0, K = 0;
+enquanto K < INDICE faça
+{
+K = K + 1;
+SOMA = SOMA + K;
+}
+imprimir(SOMA);
+
+Ao final do processamento, qual será o valor da variável SOMA?
+
+Bem, ao observar o código podemos ver que se trata de uma soma de números inteiros (int), e ele diz que enquanto K for menor que o INDICE o programa deverá fazer esses cálculos e ao fim o resultado da SOMA é 91.
+O "enquanto" se trata de uma estrutura de repetição utilizada para comparar dados e refazer as operações até que o requisito seja alcançado, normalmente é visto como "while" ou "do-while". Essa estrutura de repetição é o ideal para esses casos onde devemos ir acrescentando valores a uma variável que se torna dinâmica.
+Um exemplo do funcionamento desse código na linguagem de programação C é:
+
+#include <stdio.h>
+int main()
+{
+int INDICE = 13, SOMA = 0, K = 0;
+   while(K < INDICE){
+       K = K + 1;
+       SOMA = SOMA + K;
+   }
+   printf("%d",SOMA);
+return 0;
+}
+
+2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+
+Termo1 = int(0)
+Termo2 = int(1)
+Termo3 = int(0)
+print ('-' *42)
+print (' ' *3, 'Consulta da Sequência de Fibonacci')
+print ('-' *42)
+Valor = int(input('Digite um número: '))
+while Valor > Termo3:
+Termo3 = Termo1 + Termo2
+Termo1 = Termo2
+Termo2 = Termo3
+if Valor == 0 or Valor == 1:
+print ('O número faz parte da sequência de Fibonacci.')
+elif Valor == Termo3:
+print ('O número faz parte da sequência de Fibonacci.')
+else:
+print ('O número digitado não faz parte da sequência de Fibonacci.')
+
+IMPORTANTE:
+Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
+
+3) Descubra a lógica e complete o próximo elemento:
+a) 1, 3, 5, 7, 9
+b) 2, 4, 8, 16, 32, 64,128 
+c) 0, 1, 4, 9, 16, 25, 36,49
+d) 4, 16, 36, 64, 100
+e) 1, 1, 2, 3, 5, 8,13
+f) 2,10, 12, 16, 17, 18, 200
+
+4) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em uma sala diferente. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada.
+Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+
+Entendendo que há 3 salas cada um com uma lâmapda:
+Na primeira ida:
+- Ligo o interruptor  1 por 5 minutos e o desligo, ligo oo interruptor 2 e na mesma hora vou até uma das 3 salas
+- Se a lampada estiver acessa, pertence ao interruptor 2, se estiver desligada e quente pertence ao interruptor 1, se estiver desligada e fria pertence ao interruptor 3.
+Na segunda ida:
+- Sabendo já a qual pertence um interruptor, apenas deixo um ligado e outro desligado entre o restantes
+- Vou até outra sala e descubro os outros dois.
+
+5) Escreva um programa que inverta os caracteres de um string.
+IMPORTANTE:
+a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+b) Evite usar funções prontas, como, por exemplo, reverse;
+
+package InverteString;
+public class InverteString {
+    public static void inverteString(String str) {
+        StringBuilder inversa = new StringBuilder();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            inversa.append(str.toCharArray()[i]);
+        }
+        System.out.printf("Palavra invertida: %s\n", inversa);
+    }
+}
+
+NÃO SE ESQUEÇA DE INSERIR O LINK DO SEU REPOSITÓRIO NO GITHUB COM O CÓDIGO FONTE QUE VOCÊ DESENVOLVEU .
